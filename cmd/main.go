@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
+	currencyLoader "github.com/vsavritsky/go-gin-currency-converter/pkg/common/service/currencyLoader"
 )
 import currencyConvertor "github.com/vsavritsky/go-gin-currency-converter/pkg/common/service/currencyConvertor"
 
 func main() {
-	//currencyLoader.CreateCurrencies()
-	//currencyLoader.Load("cbr")
+	currencyLoader.CreateCurrencies()
+	currencyLoader.Load("cbr")
 
 	value := currencyConvertor.ConvertByCode("USD", "RUB", 100, "cbr")
 
